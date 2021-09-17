@@ -4,9 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WoW_App"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        mc:Ignorable="d" Height="900" Width="1300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" IsEnabled="False" WindowStyle="SingleBorderWindow">
+    <Grid Margin="0,-15,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="202*"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="1" Background="#2a2a2a" BorderBrush="#2a2a2a" HorizontalAlignment="Stretch" Margin="0,16,0,0" VerticalAlignment="Top" Width="1300" Height="100">
+            <Label Content="Auction House Prices" FontWeight="Bold" FontStretch="Normal" FontSize="42" Margin="43,9,419,-1" />
+        </Border>
+        <Image Name="backgroundRight" Source="/img/background.jpg" RenderTransformOrigin="0.5,0.5" Margin="641,415,-378,251" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.8" ScaleY="1.55"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="Realm" Margin="1020,120,0,671" FontSize="48" HorizontalAlignment="Left"/>
+        <Label Content="Item Name" Margin="1020,270,0,526" FontSize="48" HorizontalAlignment="Left"/>
+        <Label Content="Type" Margin="1020,420,0,391" FontSize="48" HorizontalAlignment="Left"/>
+        <Label Content="Order By" Margin="1020,570,0,232" FontSize="48" HorizontalAlignment="Left"/>
+        <ComboBox HorizontalAlignment="Left" Margin="1046,212,0,0" VerticalAlignment="Top" Width="219" Height="37"/>
+        <ComboBox HorizontalAlignment="Left" Margin="1046,519,0,0" VerticalAlignment="Top" Width="219" Height="37"/>
+        <ComboBox HorizontalAlignment="Left" Margin="1046,671,0,0" VerticalAlignment="Top" Width="219" Height="37"/>
+        <Button Content="Apply Filters" HorizontalAlignment="Left" Margin="1013,802,0,0" VerticalAlignment="Top" Height="56" Width="284"/>
+        <TextBox HorizontalAlignment="Left" Margin="1046,378,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Height="37" FontSize="22"/>
     </Grid>
 </Window>
